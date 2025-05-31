@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Belt'n'Clutch Mobile Repairs - Cambelts, Clutches &amp; Flywheels | Anglesey &amp; Gwynedd
+  </title>
+  <meta content="Professional mobile mechanic serving Anglesey &amp; Gwynedd. Specializing in cambelt, clutch &amp; flywheel replacement. Ford EcoBoost &amp; Transit experts. We come to you!" name="description"/>
+  <!-- Open Graph Meta Tags -->
+  <meta content="Belt'n'Clutch Mobile Repairs - Mobile Mechanic Anglesey &amp; Gwynedd" property="og:title"/>
+  <meta content="Professional mobile mechanic specializing in cambelts, clutches &amp; flywheels. Ford EcoBoost &amp; Transit experts. We come to you in Anglesey &amp; Gwynedd!" property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://beltnclutch.co.uk" property="og:url"/>
+  <meta content="https://beltnclutch.co.uk/og-image.jpg" property="og:image"/>
+  <meta content="en_GB" property="og:locale"/>
+  <meta content="Belt'n'Clutch Mobile Repairs" property="og:site_name"/>
+  <!-- Twitter Card Meta Tags -->
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Belt'n'Clutch Mobile Repairs - Mobile Mechanic" name="twitter:title"/>
+  <meta content="Professional mobile mechanic serving Anglesey &amp; Gwynedd. Ford specialists." name="twitter:description"/>
+  <meta content="https://beltnclutch.co.uk/og-image.jpg" name="twitter:image"/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(26, 26, 26, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b35;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links.mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.98);
+            flex-direction: column;
+            padding: 2rem 0;
+            gap: 1rem;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links.mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .nav-links.mobile-menu a {
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1486312338219-ce68e2c6b81d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(51, 51, 51, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(51, 51, 51, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b35, #f9ca24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+            font-weight: 300;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #d0d0d0;
+        }
+
+        .specialization {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid #ff6b35;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+            display: inline-block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ff6b35;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b35;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: #d0d0d0;
+        }
+
+        /* Problems Section */
+        .problems {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1609204930270-a0edebbdfe21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .problems h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .problem-card h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .solution {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b35, #f9ca24);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #ff6b35;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #333;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: #25d366;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid #333;
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #ff6b35;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #d0d0d0;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .btn-email {
+            background: linear-gradient(45deg, #ff6b35, #f9ca24);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-whatsapp:hover,
+        .btn-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d0d0d;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #333;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .services-grid,
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .form-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Header -->
+  <header>
+   <nav class="container">
+    <a class="logo" href="#">
+     <img alt="Belt'n'Clutch Logo" class="logo-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTkiIHN0cm9rZT0iI0ZGNkIzNSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0xMiA4SDE2VjE2SDEyVjhaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0yNCA4SDI4VjE2SDI0VjhaIiBmaWxsPSIjRkY2QjM1Ii8+CjxjaXJjbGUgY3g9IjIwIiBjeT0iMjQiIHI9IjQiIHN0cm9rZT0iI0ZGNkIzNSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxwYXRoIGQ9Ik0xMiAzMkg0VjI4SDEyVjMyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMzYgMzJIMjhWMjhIMzZWMzJaIiBmaWxsPSIjRkY2QjM1Ii8+Cjwvc3ZnPgo="/>
+     Belt'n'Clutch
+    </a>
+    <button class="menu-toggle" id="menuToggle">
+     <i class="fas fa-bars">
+     </i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+     <li>
+      <a href="#about">
+       About
+      </a>
+     </li>
+     <li>
+      <a href="#services">
+       Services
+      </a>
+     </li>
+     <li>
+      <a href="#contact">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+   <div class="container">
+    <div class="hero-content fade-in">
+     <h1>
+      Belt'n'Clutch Mobile Repairs
+     </h1>
+     <h2>
+      Cambelts, Clutches &amp; Flywheels – We come to you
+     </h2>
+     <p class="hero-subtitle">
+      Professional mobile mechanic serving
+      <strong>
+       Anglesey &amp; Gwynedd
+      </strong>
+     </p>
+     <div class="specialization">
+      <strong>
+       🚗 Specialists in:
+      </strong>
+      Ford EcoBoost • Ford Transit • VAG Group
+     </div>
+     <a class="cta-button" href="https://wa.me/447442109885?text=Hi, I need help with my car. Can you help?">
+      📱 Contact via WhatsApp
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section class="about" id="about">
+   <div class="container">
+    <div class="about-content fade-in">
+     <h2>
+      Why Choose Us?
+     </h2>
+     <p>
+      We bring honest, professional automotive repair directly to your doorstep. No need to waste time at garages or worry about getting stranded.
+     </p>
+     <p>
+      Specializing in timing belt replacements, clutch and flywheel services, we focus on what we do best. Our mobile service means we come to your home, workplace, or roadside location across Anglesey and Gwynedd.
+     </p>
+     <p>
+      <strong>
+       Fair pricing, quality parts, and expert service – that's our promise.
+      </strong>
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Services Section -->
+  <section class="services" id="services">
+   <div class="container">
+    <h2>
+     Our Services
+    </h2>
+    <div class="services-grid">
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-cogs">
+       </i>
+      </div>
+      <h3>
+       Cambelt Replacement
+      </h3>
+      <p>
+       Professional timing belt replacement to prevent catastrophic engine damage. We use quality parts and follow manufacturer specifications.
+      </p>
+     </div>
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-wrench">
+       </i>
+      </div>
+      <h3>
+       Clutch &amp; Flywheel
+      </h3>
+      <p>
+       Complete clutch and flywheel replacement service. From slipping clutches to dual-mass flywheel issues, we've got you covered.
+      </p>
+     </div>
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-car">
+       </i>
+      </div>
+      <h3>
+       Mobile Repairs
+      </h3>
+      <p>
+       We come to you – at home, work, or roadside. Fully equipped mobile workshop means no inconvenience for you.
+      </p>
+     </div>
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-search">
+       </i>
+      </div>
+      <h3>
+       Diagnostics
+      </h3>
+      <p>
+       Professional diagnostic services to identify issues accurately before any work begins. No guesswork, just facts.
+      </p>
+     </div>
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-box">
+       </i>
+      </div>
+      <h3>
+       Parts Supply
+      </h3>
+      <p>
+       We can supply quality parts or fit your own if preferred. Flexible approach to suit your budget and requirements.
+      </p>
+     </div>
+     <div class="service-card fade-in">
+      <div class="service-icon">
+       <i class="fas fa-bolt">
+       </i>
+      </div>
+      <h3>
+       Ford Specialists
+      </h3>
+      <p>
+       Extensive experience with Ford EcoBoost engines and Transit vans. We know these vehicles inside and out.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Problems Section -->
+  <section class="problems">
+   <div class="container">
+    <h2>
+     Common Problems We Solve
+    </h2>
+    <div class="problems-grid">
+     <div class="problem-card fade-in">
+      <h3>
+       ⏰ No time to visit a garage?
+      </h3>
+      <p>
+       Busy schedule making it impossible to drop your car off? We understand. Our mobile service means you don't lose a day waiting around.
+      </p>
+     </div>
+     <div class="problem-card fade-in">
+      <h3>
+       🔊 Engine rattle on cold start?
+      </h3>
+      <p>
+       That concerning rattle when you start your Ford EcoBoost? It's likely the timing chain or belt. Don't ignore it – we can diagnose and fix it.
+      </p>
+     </div>
+     <div class="problem-card fade-in">
+      <h3>
+       🔥 Burning clutch smell?
+      </h3>
+      <p>
+       Clutch slipping or burning smell when driving? Your clutch may be on its way out. We can assess and replace before you get stranded.
+      </p>
+     </div>
+     <div class="problem-card fade-in">
+      <h3>
+       💸 Unexpected high garage quotes?
+      </h3>
+      <p>
+       Shocked by main dealer prices? Our mobile service eliminates expensive overheads, passing the savings directly to you.
+      </p>
+     </div>
+    </div>
+    <div class="solution fade-in">
+     <h3>
+      ✅ Our Solution: We Come To You
+     </h3>
+     <p>
+      Professional repairs at your location, fair pricing, and honest advice. Get back on the road without the hassle.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+   <div class="container">
+    <h2>
+     Get In Touch
+    </h2>
+    <div class="contact-grid">
+     <div class="contact-card fade-in">
+      <div class="contact-icon">
+       <i class="fas fa-phone-alt">
+       </i>
+      </div>
+      <h3>
+       WhatsApp
+      </h3>
+      <p>
+       Quick response, photos, and instant quotes
+      </p>
+      <a href="https://wa.me/447442109885?text=Hi, I need help with my car. Can you help?">
+       07442 109 885
+      </a>
+     </div>
+     <div class="contact-card fade-in">
+      <div class="contact-icon">
+       <i class="fas fa-envelope">
+       </i>
+      </div>
+      <h3>
+       Email
+      </h3>
+      <p>
+       Detailed enquiries and quotes
+      </p>
+      <a href="mailto:info@beltnclutch.co.uk">
+       info@beltnclutch.co.uk
+      </a>
+     </div>
+     <div class="contact-card fade-in">
+      <div class="contact-icon">
+       <i class="fas fa-map-marker-alt">
+       </i>
+      </div>
+      <h3>
+       Service Area
+      </h3>
+      <p>
+       Mobile service covering
+      </p>
+      <strong>
+       Anglesey &amp; Gwynedd
+      </strong>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <section class="contact-form-section">
+   <div class="container">
+    <h2>
+     Quick Contact Form
+    </h2>
+    <div class="contact-form">
+     <div class="form-group">
+      <label for="name">
+       Your Name
+      </label>
+      <input id="name" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="phone">
+       Phone Number
+      </label>
+      <input id="phone" required="" type="tel"/>
+     </div>
+     <div class="form-group">
+      <label for="car">
+       Car (Make &amp; Model)
+      </label>
+      <input id="car" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="issue">
+       Describe the Issue
+      </label>
+      <textarea id="issue" required=""></textarea>
+     </div>
+     <div class="form-buttons">
+      <button class="btn-whatsapp" onclick="sendWhatsApp()">
+       Send via WhatsApp
+      </button>
+      <button class="btn-email" onclick="sendEmail()">
+       Send via Email
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer>
+   <div class="container">
+    <div alt="Belt'n'Clutch Mobile Logo" class="footer-logo">
+     <img alt="Belt'n'Clutch Logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTkiIHN0cm9rZT0iI0ZGNkIzNSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0xMiA4SDE2VjE2SDEyVjhaIiBmaWxsPSIjRkY2QjM1Ii8+CjxwYXRoIGQ9Ik0yNCA4SDI4VjE2SDI0VjhaIiBmaWxsPSIjRkY2QjM1Ii8+CjxjaXJjbGUgY3g9IjIwIiBjeT0iMjQiIHI9IjQiIHN0cm9rZT0iI0ZGNkIzNSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxwYXRoIGQ9Ik0xMiAzMkg0VjI4SDEyVjMyWiIgZmlsbD0iI0ZGNkIzNSIvPgo8cGF0aCBkPSJNMzYgMzJIMjhWMjhIMzZWMzJaIiBmaWxsPSIjRkY2QjM1Ii8+Cjwvc3ZnPgo=" style="width: 30px; height: 30px; margin-right: 10px; vertical-align: middle;"/>
+     Belt'n'Clutch Mobile Repairs
+    </div>
+    <p>
+     © 2025 Belt'n'Clutch Mobile Repairs. Professional mobile mechanic services in Anglesey &amp; Gwynedd.
+    </p>
+    <p>
+     <small>
+      Cambelts • Clutches • Flywheels • Ford Specialists
+     </small>
+    </p>
+   </div>
+  </footer>
+  <script>
+   // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('mobile-menu');
+            navLinks.classList.toggle('active');
+            
+            // Change icon
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('mobile-menu', 'active');
+                menuToggle.querySelector('i').className = 'fas fa-bars';
+            }
+        });
+
+        // Contact form functions
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const car = document.getElementById('car').value;
+            const issue = document.getElementById('issue').value;
+            
+            if (!name || !phone || !car || !issue) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            const message = `Hi! I need help with my car:%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACar: ${encodeURIComponent(car)}%0AIssue: ${encodeURIComponent(issue)}`;
+            
+            window.open(`https://wa.me/447442109885?text=${message}`, '_blank');
+        }
+
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const car = document.getElementById('car').value;
+            const issue = document.getElementById('issue').value;
+            
+            if (!name || !phone || !car || !issue) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            const subject = encodeURIComponent('Car Repair Quote Request');
+            const body = encodeURIComponent(`Hi,
+
+I need help with my car:
+
+Name: ${name}
+Phone: ${phone}
+Car: ${car}
+Issue: ${issue}
+
+Please get back to me with a quote.
+
+Best regards,
+${name}`);
+            
+            window.location.href = `mailto:info@beltnclutch.co.uk?subject=${subject}&body=${body}`;
+        }
+  </script>
+ </body>
+</html>
